@@ -1,4 +1,4 @@
-#How to Conduct Genome-Wide Association Studies using PLINK & UKBB
+# How to Conduct Genome-Wide Association Studies using PLINK & UKBB
 
 
 ## Setup
@@ -55,4 +55,4 @@ nohup /data/mprc_data1/home/yezhenya/MPRC.lib/tools/plink_linux_x86_64_20200121/
 ```
 _Documentation of various command utilities in PLINK can be found [here](https://zzz.bwh.harvard.edu/plink/reference.shtml#options)._
 
-4. R code for auto generating bash scripts of PCA and GWAS for each chromosome
+4. [R code](GWAS_PLINK/GWAS_BAG_bashgenerator.R) for auto generating bash scripts of PCA and GWAS for each chromosome
