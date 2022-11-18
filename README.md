@@ -5,7 +5,7 @@
   - Command line software, Plink: https://zzz.bwh.harvard.edu/plink/anal.shtml
 
 ## Procedure
-_Ex. outcome - Brain Age Gap_
+_Ex. outcome - Brain Age Gap;_
 _Ex. chromosome - chr 1_
 1. Derive covariates for each chromosome and save as a txt file:
    * UKBB phenotype data saved in :
