@@ -55,4 +55,4 @@ nohup /data/mprc_data1/home/yezhenya/MPRC.lib/tools/plink_linux_x86_64_20200121/
 ```
 _Documentation of various command utilities in PLINK can be found [here](https://zzz.bwh.harvard.edu/plink/reference.shtml#options)._
 
-4. [R code](GWAS_PLINK/GWAS_BAG_bashgenerator.R) for auto generating bash scripts of PCA and GWAS for each chromosome
+4. [R code](https://github.com/xavienzo/GWAS-PLINK/blob/fd2aabb352d91ac9b806c8ded5ac75e66bc679b2/GWAS_BAG_bashgenerator.R#L1) for auto generating bash scripts of PCA and GWAS for each chromosome
