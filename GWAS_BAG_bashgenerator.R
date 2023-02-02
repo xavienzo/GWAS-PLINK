@@ -2,11 +2,11 @@
 
 #########################
 # Replace the file/folder paths with your own and you are good to go!
-PCA_directory <- "/data/brutus_data24/yezhipan/GWAS_BAG/PCA"
-GWAS_directory <- "/data/brutus_data24/yezhipan/GWAS_BAG/GWAS"
-EID_file <- "/data/brutus_data24/yezhipan/GWAS_BAG/BAGeid.txt"
-outcome_file <- "/data/brutus_data24/yezhipan/GWAS_BAG/BAG.txt"
-covar_directory <- "/data/brutus_data24/zhenyao.ye/PropensityScore/reBAG/GWAS"
+PCA_directory <- "/data/brutus_data25/valerie.pan/GWAS/PCA"
+GWAS_directory <- "/data/brutus_data25/valerie.pan/GWAS/Assoc"
+EID_file <- "/data/brutus_data25/valerie.pan/GWAS/Data/SMKeid.txt"
+outcome_file <- "/data/brutus_data25/valerie.pan/GWAS/Data/SMKpheno.txt"
+covar_directory <- "/data/brutus_data25/valerie.pan/GWAS/Assoc"
 #########################
 
 ###Generate PCA bash code
@@ -21,13 +21,13 @@ for (i in 1:22) {
                 " --chr ",i,
                 " --pca 10 approx allele-wts ",
                 "--keep ", EID_file,
-                " --out ", PCA_directory, "/chr",i,"/PCA_TestsetBAG_chr",i," ",
+                " --out ", PCA_directory, "/chr",i,"/PCA_LightHeavySMK_chr",i," ",
                 " & ",
                 sep = "")
   code=append(code, temp)
 }
 write.table(code, 
-            file = "PCAcode.txt", 
+            file = "PCAcode_SMK.txt", 
             row.names = F, col.names = F, quote = F)
 
 
@@ -42,13 +42,13 @@ for (i in 1:22) {
                "--bfile /data/mprc_data2/BrightData/chen.mo/ukb_gwas/after_filtration/maf0.01/chr",i,"/filter_white_chr",i,
                " --keep ", EID_file,
                " --pheno ", outcome_file,
-               " --all-pheno --covar ", covar_directory, "/cov_TestsetBAG_chr",i,".txt",
-               " --linear",
-               " --out /data/brutus_data24/yezhipan/GWAS_BAG/GWAS/chr",i,"/GWAS_TestsetBAG_chr",i," ",
+               " --all-pheno --covar ", covar_directory, "/cov_LightHeavySMK_chr",i,".txt",
+               " --logistic",
+               " --out ",GWAS_directory, "/chr",i,"/GWAS_LightHeavySMK_chr",i," ",
                " & ",
                sep = "")
   code=append(code, temp)
 }
 write.table(code, 
-            file = "GWAScode1.txt", 
+            file = "GWAScode_SMK.txt", 
             row.names = F, col.names = F, quote = F)
